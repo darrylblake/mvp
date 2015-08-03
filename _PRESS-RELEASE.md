@@ -41,7 +41,7 @@ Suck till you don't suck so much...
 Thumbs Check doesn't require any download from either side. Simple visit the site, select if you are part of the audience or the presenter. Presenters will be provided with a short unique number to allow their audience to provide feedback on.
 
 ## Customer Quote ##
-"I was always going on the most random tangets. ThumbsCheck put a stop to all of that, pronto! Thanks ThumbsCheck... *thumbs check*"
+"I was always going on the most random tangets. ThumbsCheck put a stop to all of that, pronto! Thanks ThumbsCheck... 👍👍👍"
 
 ## Closing and Call to Action ##
 Save your audiences from boring undending drivel, use ThumbsCheck today!
