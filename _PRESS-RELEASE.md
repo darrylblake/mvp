@@ -25,23 +25,23 @@ ThumbsCheck allows you to:
 - Gauge the general interest on an idea you just presented
 - Get the level of understanding from your students
 - Guidance on which path to go down
-Saving you time and wasted effort, providing all of the above acurately, in realtime - when it matters the most.
+Saving you time and wasted effort, providing all of the above acurately, in real-time - when it matters the most.
 
 
 ## Problem ##
 Dealing with large groups of people, it's hard to gauge and determine the general consensus. A simple thumbs check with the audience is an effective way to get feedback. But results are often skewed as everyone can see everyone elses response.
 
 ## Solution ##
-Thumbs check provides allows for accurate and private feedback. The presenter can immediately decide where to go next based on realtime feedback, and can reassess as often as required. 
+ThumbsCheck allows for accurate, private and instant feedback. The presenter can immediately decide where to go next based on real-time responses, and can reassess as often as required. 
 
 ## Quote from Founder ##
 Suck till you don't suck so much...
 
 ## How to Get Started ##
-Thumbs Check doesn't require any download from either side. Simple visit the site, select if you are part of the audience or the presenter. Presenters will be provided with a short unique number to allow their audience to provide feedback on.
+ThumbsCheck doesn't require any download from either side. Simply visit the site, select if you are part of the audience or the presenter. Presenters will be provided with a short unique number to allow their audience to provide feedback on.
 
 ## Customer Quote ##
-"I was always going on the most random tangets. ThumbsCheck put a stop to all of that, pronto! Thanks ThumbsCheck... 👍👍👍"
+"I was always going on the most random tangents. ThumbsCheck put a stop to all of that! Thanks ThumbsCheck... 👍👍👍"
 
 ## Closing and Call to Action ##
 Save your audiences from boring undending drivel, use ThumbsCheck today!
