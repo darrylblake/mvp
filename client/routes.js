@@ -2,15 +2,15 @@ var app = angular.module('ThumbsCheck')
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
-        template: '<h1>Home</h1>'
+        templateUrl: 'templates/index.html'
       })
 
       .when('/speak', {
-        template: '<h1>Speaking</h1>'
+        templateUrl: 'templates/speak.html'
       })
 
       .when('/listen', {
-        template: '<h1>Listening</h1>'
+        templateUrl: 'templates/listen.html'
       })
 
       .otherwise({
