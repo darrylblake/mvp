@@ -122,5 +122,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['concat', 'sass', 'watch']);
+  grunt.registerTask('start', ['nodemon']);
 
 };
