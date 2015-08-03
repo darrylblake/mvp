@@ -6,11 +6,16 @@ var app = angular.module('ThumbsCheck')
       })
 
       .when('/speak', {
-        templateUrl: 'templates/speak.html'
+        templateUrl: 'templates/speak.html',
+        controller: 'SpeakController'
       })
 
       .when('/listen', {
         templateUrl: 'templates/listen.html'
+      })
+
+      .when('/listen/:code', {
+        templateUrl: 'templates/vote.html'
       })
 
       .otherwise({
