@@ -1,1 +1,1 @@
-var app = angular.modeul('thumbscheck', []);
+var app = angular.module('ThumbsCheck', ['ngRoute']);
