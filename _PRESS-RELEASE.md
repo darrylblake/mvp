@@ -1,4 +1,4 @@
-# Project Name #
+# Thumbs Check #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -16,29 +16,32 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+## Feedback from humans, instantly! ##
 
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+### Easily get feedback and make descisions in real-time. ###
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+ThumbsCheck allows you to:
+- Gauge the general interest on an idea you just presented
+- Get the level of understanding from your students
+- Guidance on which path to go down
+Saving you time and wasted effort, providing all of the above acurately, in realtime - when it matters the most.
+
 
 ## Problem ##
-  > Describe the problem your product solves.
+Dealing with large groups of people, it's hard to gauge and determine the general consensus. A simple thumbs check with the audience is an effective way to get feedback. But results are often skewed as everyone can see everyone elses response.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+Thumbs check provides allows for accurate and private feedback. The presenter can immediately decide where to go next based on realtime feedback, and can reassess as often as required. 
 
-## Quote from You ##
-  > A quote from a spokesperson in your company.
+## Quote from Founder ##
+Suck till you don't suck so much...
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+Thumbs Check doesn't require any download from either side. Simple visit the site, select if you are part of the audience or the presenter. Presenters will be provided with a short unique number to allow their audience to provide feedback on.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+"I was always going on the most random tangets. ThumbsCheck put a stop to all of that, pronto! Thanks ThumbsCheck... *thumbs check*"
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+Save your audiences from boring undending drivel, use ThumbsCheck today!
