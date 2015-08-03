@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ThumbsCheck">
 <head>
   <meta charset="utf-8">
   <title>ThumbsCheck</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="/public/styles.css">
 </head>
 
 <body>
+  <div ng-view></div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.min.js"></script>
+  <script src="/app.js"></script>
+  <script src="/routes.js"></script>
 </body>
 </html>
