@@ -14,6 +14,38 @@ module.exports = function(grunt) {
       }
     },
 
+    concat: {
+      options: {
+        separator: '\n'
+      },
+      sass: {
+        files: {
+          'client/assets/css/combined.scss': [
+            'client/assets/css/reset.scss',
+            'client/assets/css/main.scss',
+          ]
+        }
+      }
+    },
+
+    sass: {
+      dist: {
+        options: {
+          sourceMap: true,
+        },
+        files: {
+          'client/public/styles.css':'client/assets/css/combined.scss',
+        }
+      }
+    },
+
+    watch: {
+      css: {
+        files: 'client/assets/css/**/*.scss',
+        tasks: ['concat', 'sass']
+      }
+    },
+
     // cssmin: {
     //   combine: {
     //     files: {
@@ -21,8 +53,6 @@ module.exports = function(grunt) {
     //     }
     //   }
     // },
-
-
 
     // jshint: {
     //   files: [
@@ -38,11 +68,11 @@ module.exports = function(grunt) {
     //   }
     // },
 
-    // nodemon: {
-    //   dev: {
-    //     script: 'server.js'
-    //   }
-    // },
+    nodemon: {
+      dev: {
+        script: 'server.js'
+      }
+    },
 
     // concat: {
     //   options: {
@@ -60,7 +90,6 @@ module.exports = function(grunt) {
     //     }
     //   }
     // },
-
 
     // watch: {
     //   scripts: {
@@ -83,6 +112,8 @@ module.exports = function(grunt) {
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  // grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -90,6 +121,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-nodemon');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['concat', 'sass', 'watch']);
 
 };
