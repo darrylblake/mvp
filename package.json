@@ -1,0 +1,23 @@
+{
+  "name": "thumbscheck",
+  "version": "1.0.0",
+  "description": "Feedback from humans, instantly!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darrylblake/2015-06-mvp.git"
+  },
+  "author": "Darryl Blake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darrylblake/2015-06-mvp/issues"
+  },
+  "homepage": "https://github.com/darrylblake/2015-06-mvp#readme",
+  "dependencies": {
+    "angular": "^1.4.3",
+    "express": "^4.13.3"
+  }
+}
