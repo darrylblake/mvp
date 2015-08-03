@@ -18,6 +18,7 @@
   "homepage": "https://github.com/darrylblake/2015-06-mvp#readme",
   "dependencies": {
     "angular": "^1.4.3",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "grunt": "^0.4.5"
   }
 }
