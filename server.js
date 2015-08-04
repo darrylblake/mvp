@@ -13,7 +13,7 @@ var votes = {}
 setInterval(function() {
   for (var user in votes) {
     console.log(votes[user]);
-    if(currentTime() - votes[user].time > 20) {
+    if(currentTime() - votes[user].time > 10) {
       delete votes[user];
     };
     var chart = [];
