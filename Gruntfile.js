@@ -20,9 +20,9 @@ module.exports = function(grunt) {
       },
       sass: {
         files: {
-          'client/assets/css/combined.scss': [
-            'client/assets/css/reset.scss',
-            'client/assets/css/main.scss',
+          'client/css/combined.scss': [
+            'client/css/reset.scss',
+            'client/css/main.scss',
           ]
         }
       }
@@ -34,14 +34,14 @@ module.exports = function(grunt) {
           sourceMap: true,
         },
         files: {
-          'client/public/styles.css':'client/assets/css/combined.scss',
+          'client/public/styles.css':'client/css/combined.scss',
         }
       }
     },
 
     watch: {
       css: {
-        files: 'client/assets/css/**/*.scss',
+        files: 'client/css/**/*.scss',
         tasks: ['concat', 'sass']
       }
     },
