@@ -12,13 +12,52 @@
     <a href="#/listen">Listen</a>
   </ul>
 
+  <div id="position"></div>
+
   <div ng-view></div>
+
+  <form>
+    <input id="m">
+    <button>SEND!</button>
+  </form>
+
   <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
   <script>
     var socket = io();
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script>
+
+  var socket = io();
+
+  document.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+      var touch = e.touches[0];
+      setTimeout(function(){
+        socket.emit('chat message', touch.pageX); 
+      }, 100)
+  }, false);
+
+
+  // $('body').on('mousemove', function(e) {
+  //   if (e.which == 1) {
+  //     console.log(e.pageX);
+  //     socket.emit('chat message', e.pageX);
+  //   };
+  // });
+
+
+  $('form').submit(function(){
+    socket.emit('chat message', $('#m').val());
+    $('#m').val('');
+    return false;
+  });
+  socket.on('chat message', function(msg){
+    $('#position').text(msg);
+  });
+</script>
   <script src="/app.js"></script>
   <script src="/routes.js"></script>
   <script src="/controllers/speak-controller.js"></script>

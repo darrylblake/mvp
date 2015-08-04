@@ -42,6 +42,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; 
 }
+html {
+  height: 100%;
+}
 body{
   font-family: 'arial';
+  height: 100%;
+  border: 1px solid red;
 }
