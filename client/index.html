@@ -16,6 +16,8 @@
 
   <div ng-view></div>
 
+  <div class="marker"></div>
+
   <form>
     <input id="m">
     <button>SEND!</button>
@@ -36,7 +38,8 @@
       e.preventDefault();
       var touch = e.touches[0];
       setTimeout(function(){
-        socket.emit('chat message', touch.pageX); 
+
+        socket.emit('chat message', [touch.pageY, touch.pageX]); 
       }, 100)
   }, false);
 
@@ -56,6 +59,7 @@
   });
   socket.on('chat message', function(msg){
     $('#position').text(msg);
+    $('.marker').css({'top': msg[0], 'left': msg[1]});
   });
 </script>
   <script src="/app.js"></script>
