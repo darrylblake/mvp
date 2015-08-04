@@ -7,23 +7,50 @@ app.use('/', express.static(__dirname + '/client'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
-var votes = {}
+var presentations = {}
 
 // Delete votes older than 10 seconds
 setInterval(function() {
-  for (var user in votes) {
-    console.log(votes[user]);
-    if(currentTime() - votes[user].time > 10) {
-      delete votes[user];
-    };
+  // for (var user in votes) {
+  //   // Delete users votes after a period
+  //   if(currentTime() - votes[user].time > 10) {
+  //     delete votes[user];
+  //   };
+
+  //   // { code: '5678', user: 'CMDRGQU2Y3', score: 298 }
+
+  //   var presentations = {};
+
+  //   var chart = [];
+  //   for (var vote in votes) {
+  //     chart.push(votes[vote].vote);
+  //   }
+
+
+  //   if (chart.length === 0) {
+  //     chart = [50];
+  //   }
+  //   io.emit('serverdata-2MJN', chart.sort());
+  // }
+
+  for (var presentation in presentations) {
+    var code = presentation;
+    var presentation = presentations[presentation];
+
     var chart = [];
-    for (var vote in votes) {
-      chart.push(votes[vote].vote);
+    for (var vote in presentation) {
+      var vote = presentation[vote];
+      // Delete vote after a certain period
+      if(currentTime() - vote.time > 10) {
+        delete vote;
+      } else {
+        chart.push(vote.score);
+      }
     }
-    if (chart.length === 0) {
-      chart = [50];
+ 
+    if (chart.length > 0) {
+      io.emit('serverdata-' + code.toUpperCase(), chart.sort());
     }
-    io.emit('serverdata', chart.sort());
   }
 }, 250)
 
@@ -32,9 +59,12 @@ function currentTime(){
 }
 
 io.on('connection', function(socket){
+  // On receiving a vote
   socket.on('uservote', function(data){
-    votes[data.user] = {
-      'vote': data.vote,
+    var code = data.code || '0000';
+    presentations[code] = presentations[code] || {}
+    presentations[code][data.user] = {
+      'score': data.score,
       'time': currentTime()
     }
   });
@@ -46,7 +76,7 @@ io.on('connection', function(socket){
 });
     
 
-var server = http.listen(7878, function () {
+var server = http.listen(7777, function () {
   var host = server.address().address;
   var port = server.address().port;
   console.log(host, port);

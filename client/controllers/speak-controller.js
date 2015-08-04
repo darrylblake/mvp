@@ -1,10 +1,12 @@
 var app = angular.module('ThumbsCheck');
 
-app.controller('SpeakController', function() {
+app.controller('SpeakController', function($scope) {
+  $scope.code = alphaNum(4);
 
   $(function() {
     var chart;
-    socket.on('serverdata', function(data){
+    socket.on('serverdata-' + $scope.code.toLowerCase(), function(data){
+      console.log(data);
       var data = {
         // TODO: Labels should represent each audience member
         labels: [1,2,3,4,5,6],
@@ -15,7 +17,6 @@ app.controller('SpeakController', function() {
       chart.update(data);
     });
   });
-  
 });
 
 

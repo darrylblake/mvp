@@ -1,6 +1,6 @@
 var app = angular.module('ThumbsCheck');
 
-app.controller('ListenController', function() {
+app.controller('ListenController', function($scope) {
 
 
   
@@ -8,8 +8,9 @@ app.controller('ListenController', function() {
   $('.votepatch').on('mousemove', function(e) {
     if (e.which == 1) {
       socket.emit('uservote', {
-        'user': unique,
-        'vote': e.pageY
+        'code': $scope.code,
+        'user': session,
+        'score': e.pageY
       });
     };
   });

@@ -1,7 +1,12 @@
-<h1>Listen</h1>
 
-<p>Entercode</p>
-<input type="text">
+<section ng-controller="ListenController">
+  <h1>Listen</h1>
 
+  <p>Entercode</p>
+  <input type="text" ng-model="code">
+  {{ code }}
+  <div class="votepatch">
+      
+  </div>
 
-<div class="votepatch" ng-controller="ListenController"></div>
+</section>
