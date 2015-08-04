@@ -11,7 +11,8 @@ var app = angular.module('ThumbsCheck')
       })
 
       .when('/listen', {
-        templateUrl: 'templates/listen.html'
+        templateUrl: 'templates/listen.html',
+        controller: 'ListenController'
       })
 
       .when('/listen/:code', {

@@ -1,18 +1,18 @@
 var app = angular.module('ThumbsCheck');
 
 app.controller('ListenController', function() {
-  // An $http AJAX call to the server to gather votes...
-  $('body').on('mousemove', function(e) {
+
+
+  
+  // Detects desktop
+  $('.votepatch').on('mousemove', function(e) {
     if (e.which == 1) {
-      
       socket.emit('vote', {
         'user': unique,
         'vote': e.pageY
       });
     };
   });
-
-  var unique = Math.floor(Math.random() * 999999 + 999999);
   // Detecting user touch...
   // document.addEventListener('touchmove', function(e) {
   //     e.preventDefault();
@@ -23,30 +23,30 @@ app.controller('ListenController', function() {
   //     });      
   // }, false);
 
-$('body').on('mousedown touchstart', function(e) {
+// $('body').on('mousedown touchstart', function(e) {
 
-  var touch = e.originalEvent.touches;
-  //e.preventDefault();
+//   var touch = e.originalEvent;
+//   //e.preventDefault();
 
-  var pageX = touch ? touch[0].pageX : e.pageX;
+//   //var pageX = touch ? touch[0].pageX : e.pageX;
 
-    socket.emit('vote', {
-      'user': unique,
-      'vote': ev.originalEvent.pageY
-    });  
-});
+//     socket.emit('vote', {
+//       'user': unique,
+//       'vote': ev.originalEvent.pageY
+//     });  
+// });
 
-  $('body').on('swipe', function(ev) {
-    //ev.preventDefault();
-    var e = ev.originalEvent
-    e.preventDefault();
+  // $('body').on('swipe', function(ev) {
+  //   //ev.preventDefault();
+  //   var e = ev.originalEvent
+  //   e.preventDefault();
     
-    //var touch = e.touches[0];
-    socket.emit('vote', {
-      'user': unique,
-      'vote': ev.originalEvent.pageY
-    });    
-  });
+  //   //var touch = e.touches[0];
+  //   socket.emit('vote', {
+  //     'user': unique,
+  //     'vote': ev.originalEvent.pageY
+  //   });    
+  // });
 
   // $('body').on({ 'touchstart', function(ev){ 
   // });
