@@ -15,27 +15,25 @@ setInterval(function() {
     console.log(votes[user]);
     if(currentTime() - votes[user].time > 10) {
       delete votes[user];
-      io.emit('vote', votes);
     };
-    
+    var chart = [0];
+    for (var vote in votes) {
+      chart.push(votes[vote].vote);
+    }
+    io.emit('serverdata', chart);
   }
-}, 1000)
+}, 250)
 
 function currentTime(){
   return Math.floor(new Date().getTime() / 1000);
 }
 
 io.on('connection', function(socket){
-  socket.on('vote', function(data){
+  socket.on('uservote', function(data){
     votes[data.user] = {
       'vote': data.vote,
       'time': currentTime()
     }
-    var chart = [];
-    for (var vote in votes) {
-      chart.push(votes[vote].vote);
-    }
-    io.emit('vote', chart);
   });
 
   socket.on('disconnect', function(){

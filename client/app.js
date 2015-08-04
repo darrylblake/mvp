@@ -30,7 +30,7 @@ $(function() {
 
   chart.update(data);
   
-  socket.on('vote', function(data){
+  socket.on('serverdata', function(data){
     $('#position').text(JSON.stringify(data));
 
     var data = {

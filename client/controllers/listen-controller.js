@@ -7,7 +7,7 @@ app.controller('ListenController', function() {
   // Detects desktop
   $('.votepatch').on('mousemove', function(e) {
     if (e.which == 1) {
-      socket.emit('vote', {
+      socket.emit('uservote', {
         'user': unique,
         'vote': e.pageY
       });
