@@ -16,9 +16,12 @@ setInterval(function() {
     if(currentTime() - votes[user].time > 20) {
       delete votes[user];
     };
-    var chart = [50]; // Need some initial value for Chartist.
+    var chart = [];
     for (var vote in votes) {
       chart.push(votes[vote].vote);
+    }
+    if (chart.length === 0) {
+      chart = [50];
     }
     io.emit('serverdata', chart.sort());
   }
