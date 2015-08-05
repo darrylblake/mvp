@@ -41,7 +41,7 @@ setInterval(function() {
     for (var vote in presentation) {
       var vote = presentation[vote];
       // Delete vote after a certain period
-      if(currentTime() - vote.time > 10) {
+      if(currentTime() - vote.time > 20) {
         delete vote;
       } else {
         chart.push(vote.score);
@@ -49,10 +49,13 @@ setInterval(function() {
     }
  
     if (chart.length > 0) {
-      io.emit('serverdata-' + code.toUpperCase(), chart.sort());
+      console.log(presentation);
+      io.emit('serverdata-' + code.toUpperCase(), chart.sort(function(a, b) {
+        return a - b;
+      }));
     }
   }
-}, 250)
+}, 500)
 
 function currentTime(){
   return Math.floor(new Date().getTime() / 1000);

@@ -1,6 +1,7 @@
-<h1>Speaking</h1>
-
-<section ng-controller="SpeakController">
+<nav>
+  <a class="speak" href="#/listen">Listen</a><a class="listen" href="#/"><<</a>
+</nav>
+<section ng-controller="SpeakController" class="wrapper">
   <div class="chart" ng-model="chart"></div>
-  {{ code }}  
+  <div class="randomcode">{{ code }}</div>
 </section>

@@ -1,23 +1,116 @@
-html {
+$grey: #272822;
+$pink: #F92672;
+$blue: #66D9EF;
+$green: #A6E22E;
+$white: #FFF;
+
+html, body, section.wrapper {
   height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
 }
 body{
-  font-family: 'arial';
-  height: 100%;
-  border: 1px solid red;
+  color: #FFF;
+  background: $grey;
 }
 
-.marker{
+a{
+  color: $white;
+  text-decoration: none;
+}
+
+.home {
+  background: url('/layout/logo.png') no-repeat center center;
+  background-size: 230px;
+}
+
+
+
+form {
+  margin-top: 100px
+}
+
+nav {
+  z-index: 1;
   position: absolute;
-  background: blue;
-  border-radius: 100%;
-  width: 20px;
-  height: 20px;
-  top:0;
+  bottom: 0;
+  right: 0;
+  a {
+    margin-left: 5px;
+  }
 }
 
-.votepatch {
-  height: 600px;
-  width: 300px;
-  background: pink;
+body, nav a, button, input {
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #FFF;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+input {
+  margin: 0;
+  padding: 0;
+  color: $grey;
+  padding: 14px;
+  width: 180px;
+  text-align: center;
+  border: none;
+}
+.chart{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: $blue;
+  /* Control the thikness of your lines */
+  stroke-width: 5px;
+  /* Create a dashed line with a pattern */
+  
+}
+
+/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+.ct-series-a .ct-point {
+  /* Colour of your points */
+  stroke: $blue;
+  /* Size of your points */
+  stroke-width: 20px;
+  /* Make your points appear as squares */
+}
+
+
+#votepatch {
+  background: $pink;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.randomcode {
+  font-size: 150px;
+  color: $pink;
+  margin-top: 100px
+}
+
+button {
+  line-height: 60px;
+}
+nav a, button {
+  background: #000;
+  line-height: 80px;
+  display: inline-block;
+  padding: 0 20px;
+  border: none;
+}
+
+section.wrapper {
+  position: absolute;
+  display: table-cell;
+  vertical-align: middle;
 }

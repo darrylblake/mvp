@@ -16,7 +16,8 @@ var app = angular.module('ThumbsCheck')
       })
 
       .when('/listen/:code', {
-        templateUrl: 'templates/vote.html'
+        templateUrl: 'templates/vote.html',
+        controller: 'VoteController'
       })
 
       .otherwise({

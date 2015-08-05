@@ -1,12 +1,8 @@
-
-<section ng-controller="ListenController">
-  <h1>Listen</h1>
-
-  <p>Entercode</p>
-  <input type="text" ng-model="code">
-  {{ code }}
-  <div class="votepatch">
-      
-  </div>
-
+<nav>
+  <a class="speak" href="#/speak">Speak</a><a class="listen" href="#/"><<</a>
+</nav>
+<section ng-controller="ListenController" class="wrapper">
+  <form>
+    <input type="text" pattern="[0-9]*" ng-model="code" placeholder="Code" class="code" maxlength="4"><button ng-click="vote(code)">Vote</button>
+  </form>
 </section>
